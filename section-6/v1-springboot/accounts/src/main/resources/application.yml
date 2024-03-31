@@ -1,0 +1,30 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        url: jdbc:h2:mem:testdb
+        driver-class-name: org.h2.Driver
+        username: sa
+        password: ''
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: create
+        show-sql: true
+    h2:
+        console:
+            enabled: true
+    application:
+        name: accounts
+
+build:
+    version: "1.0"
+
+accounts:
+    message: "Welcome to MDFinance accounts related local APIs "
+    contactDetails:
+        name: "Maulik Davra - Developer"
+        email: "maulik@MDFinance.com"
+    onCallSupport:
+        - (555) 555-1234
+        - (555) 523-1345

@@ -1,6 +1,5 @@
-package com.md.accounts.audit;
+package com.md.cards.audit;
 
-import org.springframework.core.env.Environment;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +15,7 @@ public class AuditAwareImpl implements AuditorAware<String> {
      */
     @Override
     public Optional<String> getCurrentAuditor() {
-        return Optional.of("ACCOUNTS_MS");
+        return Optional.of("CARDS_MS");
     }
+
 }
