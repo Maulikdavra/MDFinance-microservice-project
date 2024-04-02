@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to MDFinance accounts related QA APIs "
+  contactDetails:
+    name: "Manav Davra - Developer"
+    email: "manav@MDFinance.com"
+  onCallSupport:
+    - (666) 666-1234
+    - (666) 523-1345
