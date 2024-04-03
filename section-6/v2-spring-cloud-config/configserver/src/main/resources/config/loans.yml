@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to MDFinance loans related local APIs "
+  contactDetails:
+    name: "Amal Greg - Developer"
+    email: "amaal@eazybank.com"
+  onCallSupport:
+    - (452) 456-2176
+    - (546) 764-8934

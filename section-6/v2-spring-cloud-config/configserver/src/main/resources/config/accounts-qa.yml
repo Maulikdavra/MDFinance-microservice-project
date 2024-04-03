@@ -1,13 +1,8 @@
-spring:
-  config:
-    activate:
-      on-profile: "qa"
-
 build:
   version: "2.0"
 
 cards:
-  message: "Welcome to MDFinance cards related QA APIs "
+  message: "Welcome to MDFinance accounts related QA APIs "
   contactDetails:
     name: "Cherry Pankaj - QA Lead"
     email: "cherryl@eazybank.com"
