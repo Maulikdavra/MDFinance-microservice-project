@@ -7,6 +7,8 @@ import com.md.cards.dto.ErrorResponseDto;
 import com.md.cards.dto.ResponseDto;
 import com.md.cards.service.ICardsService;
 import io.swagger.v3.oas.annotations.Operation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -32,11 +34,11 @@ import org.springframework.web.bind.annotation.*;
         description = "CRUD REST APIs in MDFinance to CREATE, UPDATE, FETCH AND DELETE card details"
 )
 @RestController
-@RequestMapping(path = "/api/md/cards", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 public class CardsController {
 
-
+    private static final Logger logger = LoggerFactory.getLogger(CardsController.class);
     private final ICardsService iCardsService;
 
     public CardsController(ICardsService iCardsService) {
@@ -107,10 +109,11 @@ public class CardsController {
             )
     })
     @GetMapping("/fetch")
-    public ResponseEntity<CardsDto> fetchCardDetails(@RequestParam
-                                                     @Pattern(regexp="(^$|[0-9]{10})",
+    public ResponseEntity<CardsDto> fetchCardDetails(@RequestHeader("mdfinance-correlation-id") String correlationId,
+                                                     @RequestParam @Pattern(regexp="(^$|[0-9]{10})",
                                                              message = "Mobile number must be 10 digits")
                                                      String mobileNumber) {
+        logger.info("MDFinance-Correlation-ID found: {}", correlationId);
         CardsDto cardsDto = iCardsService.fetchCard(mobileNumber);
         return ResponseEntity.status(HttpStatus.OK).body(cardsDto);
     }

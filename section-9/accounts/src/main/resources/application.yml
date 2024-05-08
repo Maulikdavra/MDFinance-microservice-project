@@ -18,13 +18,22 @@ spring:
         import: "optional:configserver:http://localhost:8071/"
 
 management:
-    endpoints: # This is to enable all the endpoints
+    endpoints:
         web:
             exposure:
                 include: "*"
-    endpoint: # This is to enable the shutdown endpoint
+    health:
+        readiness-state:
+            enabled: true
+        liveness-state:
+            enabled: true
+    endpoint:
         shutdown:
             enabled: true
+        health:
+            probes:
+                enabled: true
+
     info: # This is to enable the info endpoint
         env:
             enabled: true
@@ -47,3 +56,12 @@ info:
         name: "accounts"
         description: "MDFinance Accounts Microservice"
         version: "1.0"
+
+logging:
+    level:
+        com:
+            mdfinance:
+                accounts:
+                    controller: DEBUG
+                    service: DEBUG
+                    repository: DEBUG

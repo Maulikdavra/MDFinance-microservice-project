@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.*;
 )
 @RestController
 @Validated
-@RequestMapping(path = "api/md/accounts", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AccountsController {
 
     private final IAccountsService accountsService;

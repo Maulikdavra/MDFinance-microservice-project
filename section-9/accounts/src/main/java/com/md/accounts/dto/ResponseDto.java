@@ -25,4 +25,5 @@ public class ResponseDto {
             example = "Account created successfully"
     )
     private String statusMessage;
+
 }

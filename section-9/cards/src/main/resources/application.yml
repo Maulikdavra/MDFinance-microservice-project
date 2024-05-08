@@ -18,20 +18,21 @@ spring:
     import: "optional:configserver:http://localhost:8071/"
 
 management:
-  endpoints: # This is to enable all the endpoints
+  endpoints:
     web:
       exposure:
         include: "*"
-  endpoint: # This is to enable the shutdown endpoint
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
     shutdown:
       enabled: true
-  info: # This is to enable the info endpoint
-    env:
-      enabled: true
-
-endpoints:
-  shutdown:
-    enabled: true
+    health:
+      probes:
+        enabled: true
 
 eureka:
   instance:
@@ -47,3 +48,12 @@ info:
     name: "cards"
     description: "MDFinance Cards Microservice"
     version: "1.0"
+
+logging:
+  level:
+    com:
+      mdfinance:
+        cards:
+          controller: DEBUG
+          service: DEBUG
+          repository: DEBUG
