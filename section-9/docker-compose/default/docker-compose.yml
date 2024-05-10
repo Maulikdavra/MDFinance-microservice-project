@@ -9,6 +9,7 @@ services:
       file: common-config.yml
       service: microservice-db-config
 
+
   loansdb:
     container_name: loansdb
     ports:
@@ -43,6 +44,8 @@ services:
     extends:
       file: common-config.yml
       service: microservice-base-config
+    networks:
+      - MDFinance
 
   eurekaserver:
     image: "maulikdavra/eurekaserver:s9"
@@ -63,6 +66,8 @@ services:
       service: microservice-configserver-config
     environment:
       SPRING_APPLICATION_NAME: "eurekaserver"
+    networks:
+      - MDFinance
 
   accounts:
     image: "maulikdavra/accounts:s9"
@@ -84,9 +89,12 @@ services:
       start_period: 30s
     environment:
       SPRING_APPLICATION_NAME: "accounts"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://accountsdb:3306/accountsdb"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
+    networks:
+      - MDFinance
 
   loans:
     image: "maulikdavra/loans:s9"
@@ -103,14 +111,17 @@ services:
     healthcheck:
       test: "curl --fail --silent localhost:8090/actuator/health/readiness | grep UP || exit 1"
       interval: 20s
-      timeout: 10s
+      timeout: 40s
       retries: 24
       start_period: 30s
     environment:
       SPRING_APPLICATION_NAME: "loans"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://loansdb:3306/loansdb"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
+    networks:
+      - MDFinance
 
   cards:
     image: "maulikdavra/cards:s9"
@@ -127,14 +138,17 @@ services:
     healthcheck:
       test: "curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1"
       interval: 20s
-      timeout: 10s
+      timeout: 40s
       retries: 24
       start_period: 30s
     environment:
       SPRING_APPLICATION_NAME: "cards"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://cardsdb:3306/cardsdb"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
+    networks:
+      - MDFinance
 
   gatewayserver:
     image: "maulikdavra/gatewayserver:s9"
@@ -153,6 +167,8 @@ services:
     extends:
       file: common-config.yml
       service: microservice-eureka-config
+    networks:
+        - MDFinance
 
 networks:
   MDFinance:

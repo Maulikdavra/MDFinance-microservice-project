@@ -32,7 +32,7 @@ public interface CardsFeignClient {
      * @param mobileNumber of the customer
      * @return - card details
      */
-    @GetMapping(value = "/api/md/cards/fetch", consumes = "application/json")
+    @GetMapping(value = "/api/fetch", consumes = "application/json")
     public ResponseEntity<CardsDto> fetchCardDetails(@RequestHeader("mdfinance-correlation-id") String correlationId,
                                                      @RequestParam String mobileNumber);
 }

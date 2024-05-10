@@ -35,7 +35,7 @@ public interface LoansFeignClient {
      * @param mobileNumber of the customer
      * @return - loans details
      */
-    @GetMapping(value = "/api/md/loans/fetch", consumes = "application/json")
+    @GetMapping(value = "/api/fetch", consumes = "application/json")
     public ResponseEntity<LoansDto> fetchLoanDetails(@RequestHeader("mdfinance-correlation-id") String correlationId,
                                                      @RequestParam String mobileNumber);
 }
