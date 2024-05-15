@@ -1,4 +1,16 @@
 services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: [ "CMD-SHELL", "redis-cli ping | grep PONG" ]
+      timeout: 10s
+      retries: 10
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
   accountsdb:
     container_name: accountsdb
     ports:
@@ -8,6 +20,7 @@ services:
     extends:
       file: common-config.yml
       service: microservice-db-config
+
 
   loansdb:
     container_name: loansdb
@@ -30,7 +43,7 @@ services:
       service: microservice-db-config
 
   configserver:
-    image: "maulikdavra/configserver:s8"
+    image: "maulikdavra/configserver:s10"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -43,9 +56,11 @@ services:
     extends:
       file: common-config.yml
       service: microservice-base-config
+    networks:
+      - MDFinance
 
   eurekaserver:
-    image: "maulikdavra/eurekaserver:s8"
+    image: "maulikdavra/eurekaserver:s10"
     container_name: eurekaserver-ms
     ports:
       - "8070:8070"
@@ -54,66 +69,124 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:8070/actuator/health/readiness | grep UP || exit 1"
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 10s
+      interval: 20s
+      timeout: 15s
+      retries: 20
+      start_period: 20s
     extends:
       file: common-config.yml
       service: microservice-configserver-config
     environment:
       SPRING_APPLICATION_NAME: "eurekaserver"
+    networks:
+      - MDFinance
 
   accounts:
-    image: "maulikdavra/accounts:s8"
+    image: "maulikdavra/accounts:s10"
     container_name: accounts-ms
     ports:
       - "8080:8080"
+    depends_on:
+      accountsdb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8080/actuator/health/readiness | grep UP || exit 1"
+      interval: 20s
+      timeout: 10s
+      retries: 24
+      start_period: 30s
     environment:
       SPRING_APPLICATION_NAME: "accounts"
       SPRING_DATASOURCE_URL: "jdbc:mysql://accountsdb:3306/accountsdb"
-    depends_on:
-      accountsdb:
-        condition: service_healthy
-      configserver:
-        condition: service_healthy
     extends:
       file: common-config.yml
       service: microservice-eureka-config
+    networks:
+      - MDFinance
 
   loans:
-    image: "maulikdavra/loans:s8"
+    image: "maulikdavra/loans:s10"
     container_name: loans-ms
     ports:
       - "8090:8090"
-    environment:
-      SPRING_APPLICATION_NAME: "loans"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://loansdb:3306/loansdb"
     depends_on:
-      accountsdb:
+      loansdb:
         condition: service_healthy
       configserver:
         condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8090/actuator/health/readiness | grep UP || exit 1"
+      interval: 20s
+      timeout: 40s
+      retries: 24
+      start_period: 30s
+    environment:
+      SPRING_APPLICATION_NAME: "loans"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://loansdb:3306/loansdb"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
+    networks:
+      - MDFinance
 
   cards:
-    image: "maulikdavra/cards:s8"
+    image: "maulikdavra/cards:s10"
     container_name: cards-ms
     ports:
       - "9000:9000"
-    environment:
-      SPRING_APPLICATION_NAME: "cards"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://cardsdb:3306/cardsdb"
     depends_on:
       cardsdb:
         condition: service_healthy
       configserver:
         condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1"
+      interval: 20s
+      timeout: 40s
+      retries: 24
+      start_period: 30s
+    environment:
+      SPRING_APPLICATION_NAME: "cards"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://cardsdb:3306/cardsdb"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
+    networks:
+      - MDFinance
+
+  gatewayserver:
+    image: "maulikdavra/gatewayserver:s10"
+    container_name: gatewayserver-ms
+    ports:
+      - "8072:8072"
+    depends_on:
+      accounts:
+        condition: service_healthy
+      loans:
+        condition: service_healthy
+      cards:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "gatewayserver"
+      SPRING_DATA_REDIS_CONNECT-TIMEOUT: 2s
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+      SPRING_DATA_REDIS_TIMEOUT: 1s
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+    networks:
+      - MDFinance
 
 networks:
   MDFinance:
