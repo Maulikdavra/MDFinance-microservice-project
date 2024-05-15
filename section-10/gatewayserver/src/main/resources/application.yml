@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: "gatewayserver"
+  config:
+    import: "optional:configserver:http://configserver:8071/"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+      httpclient: # This configuration is global and will be applied to all the services passing through the gateway.
+        connect-timeout: 1000
+        response-timeout: 3s
+  data:
+    redis:
+      connect-timeout: 2s
+      host: localhost
+      port: 6379
+      timeout: 1s
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "gatewayserver"
+    description: "MDFinance Gateway Server Application"
+    version: "1.0.0"
+
+logging:
+  level:
+    com:
+      md:
+        gatewayserver: DEBUG
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10 # On how many requests the circuit breaker has \n
+      # to monitor before it tries to change the status from closed to open
+      permittedNumberOfCallsInHalfOpenState: 2 # only allow these many requests in half-open state
+      failureRateThreshold: 50 # if we have a positive response from 50% of the request, then the state will moved from closed to open.
+      waitDurationInOpenState: 10000 # wait time of 10-second in Open state.

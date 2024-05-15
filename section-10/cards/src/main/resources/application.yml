@@ -1,0 +1,65 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: "cards"
+  cloud:
+    gateway:
+      httpclient: # This configuration is local and will be applied to the card service.
+        connect-timeout: 1000
+        response-timeout: 3s
+#  profiles:
+#    active: "prod"
+  datasource:
+     url: jdbc:mysql://localhost:3308/cardsdb
+     username: root
+     password: root
+  jpa:
+    show-sql: true
+  sql:
+    init:
+      mode: always
+  config:
+    import: "optional:configserver:http://configserver:8071/"
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+
+eureka:
+  instance:
+    preferIpAddress: true # This is to get the IP address of the service registered with Eureka
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
+info:
+  app:
+    name: "cards"
+    description: "MDFinance Cards Microservice"
+    version: "1.0"
+
+logging:
+  level:
+    com:
+      mdfinance:
+        cards:
+          controller: DEBUG
+          service: DEBUG
+          repository: DEBUG
