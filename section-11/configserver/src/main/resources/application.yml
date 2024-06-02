@@ -29,6 +29,20 @@ management:
     health:
       probes:
         enabled: true
+  info: # This is to enable the info endpoint
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+logging:
+  level:
+    com:
+      MDFinance:
+        configserver: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 encrypt:
   key: "99581101MD611019958"

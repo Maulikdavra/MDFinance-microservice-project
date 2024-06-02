@@ -36,12 +36,15 @@ import org.springframework.web.bind.annotation.*;
 )
 @RestController
 @Validated
-@AllArgsConstructor
 @RequestMapping(path = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class CustomerController {
 
     private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
     private final ICustomersService customersService;
+
+    public CustomerController(ICustomersService customersService){
+        this.customersService = customersService;
+    }
 
     @Operation(
             summary = "Fetch Customer Details REST API",
@@ -67,8 +70,10 @@ public class CustomerController {
                                                                    @RequestParam @Pattern(regexp="(^$|[0-9]{10})",
                                                                            message = "Mobile number must be 10 digits")
                                                                    String mobileNumber) {
-        logger.info("MDFinance-Correlation-ID found: {}", correlationId);
+        // logger.info("MDFinance-Correlation-ID found: {}", correlationId);
+        logger.debug("fetchCustomerDetails method start");
         CustomerDetailsDto customerDetailsDto = customersService.fetchCustomerDetails(mobileNumber, correlationId);
+        logger.debug("fetchCustomerDetails method end");
         return ResponseEntity.status(HttpStatus.OK).body(customerDetailsDto);
     }
 }

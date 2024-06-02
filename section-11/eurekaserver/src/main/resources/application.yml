@@ -2,8 +2,7 @@ spring:
   application:
     name: "eurekaserver"
   config:
-    import: "optional:configserver:http://configserver:8071/"
-
+    import: "optional:configserver:http://localhost:8071/"
 
 management:
   endpoints:
@@ -19,3 +18,17 @@ management:
     health:
       probes:
         enabled: true
+  info: # This is to enable the info endpoint
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+logging:
+  level:
+    com:
+      MDFinance:
+        eurekaserver: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"

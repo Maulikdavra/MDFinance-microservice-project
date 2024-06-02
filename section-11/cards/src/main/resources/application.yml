@@ -20,7 +20,7 @@ spring:
     init:
       mode: always
   config:
-    import: "optional:configserver:http://configserver:8071/"
+    import: "optional:configserver:http://localhost:8071/"
 
 
 management:
@@ -40,6 +40,13 @@ management:
       probes:
         enabled: true
 
+  info: # This is to enable the info endpoint
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
 eureka:
   instance:
     preferIpAddress: true # This is to get the IP address of the service registered with Eureka
@@ -58,8 +65,7 @@ info:
 logging:
   level:
     com:
-      mdfinance:
-        cards:
-          controller: DEBUG
-          service: DEBUG
-          repository: DEBUG
+      MDFinance:
+        cards: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"

@@ -2,7 +2,7 @@ spring:
   application:
     name: "gatewayserver"
   config:
-    import: "optional:configserver:http://configserver:8071/"
+    import: "optional:configserver:http://localhost:8071/"
   cloud:
     gateway:
       discovery:
@@ -28,9 +28,12 @@ management:
   endpoint:
     gateway:
       enabled: true
-  info:
+  info: # This is to enable the info endpoint
     env:
       enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
 
 info:
   app:
@@ -41,8 +44,10 @@ info:
 logging:
   level:
     com:
-      md:
+      MDFinance:
         gatewayserver: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 resilience4j.circuitbreaker:
   configs:

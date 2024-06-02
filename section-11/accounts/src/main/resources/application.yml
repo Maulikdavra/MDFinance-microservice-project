@@ -15,7 +15,7 @@ spring:
         init:
             mode: always
     config:
-        import: "optional:configserver:http://configserver:8071/"
+        import: "optional:configserver:http://localhost:8071/"
     cloud:
         openfeign:
             circuitbreaker:
@@ -41,6 +41,9 @@ management:
     info: # This is to enable the info endpoint
         env:
             enabled: true
+    metrics:
+        tags:
+            application: ${spring.application.name}
 
 endpoints:
     shutdown:
@@ -64,11 +67,10 @@ info:
 logging:
     level:
         com:
-            mdfinance:
-                accounts:
-                    controller: DEBUG
-                    service: DEBUG
-                    repository: DEBUG
+            MDFinance:
+                accounts: DEBUG
+    pattern:
+        level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 resilience4j.circuitbreaker:
     configs:
