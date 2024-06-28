@@ -71,7 +71,7 @@
 				<version>3.4.1</version>
 				<configuration>
 					<to>
-						<image>maulikdavra/${project.artifactId}:s11</image>
+						<image>maulikdavra/${project.artifactId}:s12</image>
 					</to>
 				</configuration>
 			</plugin>
