@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+cards:
+  message: "Welcome to MDFinance cards related QA APIs "
+  contactDetails:
+    name: "Cherry Pankaj - QA Lead"
+    email: "cherryl@eazybank.com"
+  onCallSupport:
+    - (310) 875-4367
+    - (201) 236-1267
