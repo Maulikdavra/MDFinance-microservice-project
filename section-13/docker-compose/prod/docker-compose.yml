@@ -1,6 +1,22 @@
 version: '3.8'
 
 services:
+  rabbit:
+    image: rabbitmq:3.13-management
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: rabbitmq-diagnostics check_port_connectivity
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
   keycloak:
     image: quay.io/keycloak/keycloak:24.0.1
     container_name: keycloak
@@ -274,7 +290,7 @@ services:
       service: microservice-db-config
 
   configserver:
-    image: "maulikdavra/configserver:s12"
+    image: "maulikdavra/configserver:s13"
     container_name: configserver-ms
     platform: linux/amd64
     ports:
@@ -294,7 +310,7 @@ services:
       - MDFinance
 
   eurekaserver:
-    image: "maulikdavra/eurekaserver:s12"
+    image: "maulikdavra/eurekaserver:s13"
     container_name: eurekaserver-ms
     platform: linux/amd64
     ports:
@@ -318,11 +334,13 @@ services:
       - MDFinance
 
   accounts:
-    image: "maulikdavra/accounts:s12"
+    image: "maulikdavra/accounts:s13"
     container_name: accounts-ms
 #    ports:
 #      - "8080:8080"
     depends_on:
+      rabbit:
+        condition: service_healthy
       accountsdb:
         condition: service_healthy
       configserver:
@@ -339,6 +357,8 @@ services:
       SPRING_APPLICATION_NAME: "accounts"
       OTEL_SERVICE_NAME: "accounts"
       SPRING_DATASOURCE_URL: "jdbc:mysql://accountsdb:3306/accountsdb"
+      SPRING_RABBITMQ_HOST: "rabbit" # This is the name of the service in the docker-compose file trough
+      # which the microservice will communicate with RabbitMQ
     extends:
       file: common-config.yml
       service: microservice-eureka-config
@@ -346,11 +366,13 @@ services:
       - MDFinance
 
   loans:
-    image: "maulikdavra/loans:s12"
+    image: "maulikdavra/loans:s13"
     container_name: loans-ms
 #    ports:
 #      - "8090:8090"
     depends_on:
+      rabbit:
+        condition: service_healthy
       loansdb:
         condition: service_healthy
       configserver:
@@ -374,11 +396,13 @@ services:
       - MDFinance
 
   cards:
-    image: "maulikdavra/cards:s12"
+    image: "maulikdavra/cards:s13"
     container_name: cards-ms
 #    ports:
 #      - "9000:9000"
     depends_on:
+      rabbit:
+        condition: service_healthy
       cardsdb:
         condition: service_healthy
       configserver:
@@ -401,8 +425,20 @@ services:
     networks:
       - MDFinance
 
+  message:
+    image: "maulikdavra/message:s13"
+    container_name: message-ms
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    environment:
+      SPRING_RABBITMQ_HOST: "rabbit"
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
   gatewayserver:
-    image: "maulikdavra/gatewayserver:s12"
+    image: "maulikdavra/gatewayserver:s13"
     container_name: gatewayserver-ms
     ports:
       - "8072:8072"
