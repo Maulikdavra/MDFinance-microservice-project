@@ -1,0 +1,118 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: "accounts"
+#    profiles:
+#        active: "prod"
+    datasource:
+        url: jdbc:mysql://localhost:3306/accountsdb
+        username: root
+        password: root
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+    sql:
+        init:
+            mode: always
+    config:
+        import: "optional:configserver:http://localhost:8071/"
+    cloud:
+        openfeign:
+            circuitbreaker:
+                enabled: true
+        function:
+            definition: updateCommunication
+        stream:
+            bindings:
+                updateCommunication-in-0:
+                    destination: communication-sent # This is the name of the topics, same as the one in the message service
+                    group: ${spring.application.name} # The name of the queue will be communication-sent.accounts
+                sendCommunication-out-0:
+                    destination: send-communication # This is the name of the topics, same as the one in the message service
+            kafka:
+                binder:
+                    brokers:
+                        - localhost:9092
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    health:
+        readiness-state:
+            enabled: true
+        liveness-state:
+            enabled: true
+    endpoint:
+        shutdown:
+            enabled: true
+        health:
+            probes:
+                enabled: true
+
+    info: # This is to enable the info endpoint
+        env:
+            enabled: true
+    metrics:
+        tags:
+            application: ${spring.application.name}
+
+endpoints:
+    shutdown:
+        enabled: true
+
+eureka:
+    instance:
+        preferIpAddress: true # This is to get the IP address of the service registered with Eureka
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://localhost:8070/eureka/
+
+info:
+    app:
+        name: "accounts"
+        description: "MDFinance Accounts Microservice"
+        version: "1.0"
+
+logging:
+    level:
+        com:
+            MDFinance:
+                accounts: DEBUG
+    pattern:
+        level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
+resilience4j.circuitbreaker:
+    configs:
+        default:
+            slidingWindowSize: 10
+            permittedNumberOfCallsInHalfOpenState: 2
+            failureRateThreshold: 50
+            waitDurationInOpenState: 10000
+
+resilience4j.retry: # This wll be applicable to only account service
+    configs:
+        default:
+            maxRetryAttempts: 3
+            waitDuration: 500
+            enableExponentialBackoff: true
+            exponentialBackoffMultiplier: 2
+            # Below exception won't be retried, to see the retry in action, comment the below line
+            # Add logger.info statement in the controller method (getContactInfo, getContactInfoFallback),
+            # to see the retry in action
+            ignoreExceptions:
+                - java.lang.NullPointerException
+            retryExceptions:
+                - java.util.concurrent.TimeoutException
+
+resilience4j.rateLimiter: # This will be applicable to only account service
+    configs:
+        default:
+            timeoutDuration: 1000 # This is the time to wait for the response from the service before throwing an exception
+            limitRefreshPeriod: 5000 # This is the time to reset the limit for the next period
+            limitForPeriod: 1 # This is the number of requests allowed in the limitRefreshPeriod

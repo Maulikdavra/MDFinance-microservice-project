@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to MDFinance loans related prod APIs "
+  contactDetails:
+    name: "Pelicans Sudhir - Product Owner"
+    email: "pelias@eazybank.com"
+  onCallSupport:
+    - (723) 656-8709
+    - (156) 342-0956

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e34e85d6-bc68-4d63-b21e-5107d1b7594b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../section-11/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/dto/CustomerDtoForSpringSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/SpringSecurityForMdfinanceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/config/AuthConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/dto/CustomerDtoForSpringSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/mapper/CustomerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/CustomerFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/impl/JwtServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../section-11/spring-security-for-mdfinance/src/test/java/com/md/spring_security_for_mdfinance/SpringSecurityForMdfinanceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/02fdf8e8-5e75-40f1-9444-c0cd41516a6b/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/040aea92-58bb-40c6-bd8b-a95c584cf6ac/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/11bd9e96-e708-4642-ba4a-5d649f08f327/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/266c980e-aa88-4d28-be24-190b25f0b9d0/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/26aa1f15-1d07-423f-8a20-e56a691f8a86/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/3091272c-4c6d-4973-a556-78421f63a095/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/58e74088-ff43-4800-a0f0-4857e85873f9/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/596da8c1-14c2-4396-a9c1-23e9da91901b/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/5ee4ee5f-3246-4d5d-982c-88ff8b1b683a/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/722fa45b-cfef-481d-9cb3-5badb0bd6350/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/7314d564-5df3-4e17-89c2-72f43734ab8f/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/8154ea54-745d-4470-82ae-d76b59d75468/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/869019bd-0463-4827-8595-14540b621fef/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/8d73f33e-e8a1-4fa1-b692-62e4cdd425a6/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/8f707e6f-0316-4f71-bf95-d2449249b2b0/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/95f090cb-9fb6-461d-bb55-6fa540241c71/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/9dd4e6d5-41cf-4a6c-a8ee-3fa7912d75fd/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/a300a254-9351-4883-84e2-470e7e49f1be/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/ae08cba2-fd41-4b19-85f8-341ddb2b5432/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/b2156f33-17b8-4f5a-856f-4d0ea9ce23b7/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/be1f08e5-3a6a-446f-aab6-635452f59658/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/c54dd1d9-ddbf-4060-b5ce-562349a4f787/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/f066b31d-8aa8-4c7a-9136-e795e84798d1/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/f7de7263-3bac-4b3b-b727-e89846ec72aa/xl.meta.bkp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/.data/minio/.minio.sys/tmp/f0fb6ca6-f1ce-4b6a-b982-93fdf1fa821a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/dto/CustomerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/mapper/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/mapper/CustomerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/service/ICustomersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/service/ICustomersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/service/impl/CustomersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/accounts/src/main/java/com/md/accounts/service/impl/CustomersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/gatewayserver/src/main/java/com/md/gatewayserver/GatewayserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/gatewayserver/src/main/java/com/md/gatewayserver/GatewayserverApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Maulikdavra&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Maulikdavra/MDFinance-microservice-project.git&quot;,
+    &quot;accountId&quot;: &quot;5a8630bf-bba8-442f-930c-bcb82b1afdae&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/message/src/main/java/com/md/message/dto/AccountsMsgDto.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ikkk2BLHDdqZLX7SRrmciGESER" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.AccountsApplication.executor": "Run",
+    "Application.ConfigserverApplication.executor": "Run",
+    "Application.EurekaserverApplication.executor": "Run",
+    "Application.GatewayserverApplication.executor": "Run",
+    "Application.MessageApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/MD/Documents/spring-boot-microservice-eazybytes/section-14",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MessageApplication">
+    <configuration name="AccountsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.md.accounts.AccountsApplication" />
+      <module name="accounts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.md.accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.md.configserver.ConfigserverApplication" />
+      <module name="configserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.md.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.md.eurekaserver.EurekaserverApplication" />
+      <module name="eurekaserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.md.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.md.gatewayserver.GatewayserverApplication" />
+      <module name="gatewayserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.md.gatewayserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.md.message.MessageApplication" />
+      <module name="message" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.md.message.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GatewayserverApplication" />
+        <item itemvalue="Application.MessageApplication" />
+        <item itemvalue="Application.AccountsApplication" />
+        <item itemvalue="Application.EurekaserverApplication" />
+        <item itemvalue="Application.ConfigserverApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e34e85d6-bc68-4d63-b21e-5107d1b7594b" name="Changes" comment="" />
+      <created>1720042103656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720042103656</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
