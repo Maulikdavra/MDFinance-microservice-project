@@ -1,7 +1,9 @@
 package com.md.gatewayserver;
 
+import com.md.gatewayserver.filters.AuthenticationFilter;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.github.resilience4j.timelimiter.TimeLimiterConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.circuitbreaker.resilience4j.ReactiveResilience4JCircuitBreakerFactory;
@@ -31,6 +33,9 @@ import static org.springframework.cloud.gateway.support.RouteMetadataUtils.RESPO
 @SpringBootApplication
 public class GatewayserverApplication {
 
+	@Autowired
+	private AuthenticationFilter authenticationFilter;
+
 	public static void main(String[] args) {
 		SpringApplication.run(GatewayserverApplication.class, args);
 	}
@@ -58,7 +63,11 @@ public class GatewayserverApplication {
 		return routeLocatorBuilder.routes()
 				.route(p -> p
 						.path("/mdfinance/accounts/**")
-						.filters( f -> f.rewritePath("/mdfinance/accounts/(?<segment>.*)","/${segment}")
+						// before the request is forwarded to the ACCOUNTS service, check the Authentication Filter
+						// if the request is authenticated, then forward the request to the ACCOUNTS service
+						// add the filter below to the ACCOUNTS service that will first check if the request is authenticated
+						.filters(f -> f.filter(authenticationFilter.apply(new AuthenticationFilter.Config()))
+								.rewritePath("/mdfinance/accounts/(?<segment>.*)", "/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
 								.circuitBreaker(config -> config.setName("accountsCircuitBreaker")
 										.setFallbackUri("forward:/contactSupport")))
@@ -81,6 +90,17 @@ public class GatewayserverApplication {
 								.requestRateLimiter(config -> config.setRateLimiter(redisRateLimiter())
 										.setKeyResolver(userKeyResolver())))
 						.uri("lb://CARDS"))
+
+
+				// id: spring-security-for-mdfinance
+				// uri: lb://SPRING-SECURITY-FOR-MDFINANCE
+				// predicates: - Path=/auth/**
+				// (This is the path through which all the APIs of spring-security-for-mdfinance service can be accessed)
+				.route(p -> p
+						.path("/mdfinance/spring-security-for-mdfinance/**")
+						.filters(f -> f.rewritePath("/mdfinance/spring-security-for-mdfinance/(?<segment>.*)","/${segment}"))
+						.uri("lb://SPRING-SECURITY-FOR-MDFINANCE"))
+
 				.build();
 	}
 

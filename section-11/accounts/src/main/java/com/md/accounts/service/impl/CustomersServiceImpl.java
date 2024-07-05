@@ -12,7 +12,9 @@ import com.md.accounts.service.ICustomersService;
 import com.md.accounts.service.client.CardsFeignClient;
 import com.md.accounts.service.client.LoansFeignClient;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -27,6 +29,7 @@ public class CustomersServiceImpl implements ICustomersService{
     private CustomerRespository customerRespository;
     private CardsFeignClient cardsFeignClient;
     private LoansFeignClient loansFeignClient;
+
 
     /**
      * Method to fetch customer details based on mobile number
@@ -58,5 +61,14 @@ public class CustomersServiceImpl implements ICustomersService{
         }
 
         return customerDetailsDto;
+    }
+
+    @Override
+    public CustomerDtoForSpringSecurity fetchCustomer(String username) {
+        Customer customer = customerRespository.findByName(username).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "mobileNumber", username)
+        );
+        System.out.println("Customer fetched: " + customer.toString());
+        return CustomerMapper.mapToCustomerDtoForSpringSecurity(customer, new CustomerDtoForSpringSecurity());
     }
 }

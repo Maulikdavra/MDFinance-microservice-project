@@ -2,6 +2,7 @@ package com.md.accounts.mapper;
 
 import com.md.accounts.dto.CustomerDetailsDto;
 import com.md.accounts.dto.CustomerDto;
+import com.md.accounts.dto.CustomerDtoForSpringSecurity;
 import com.md.accounts.entity.Customer;
 
 /**
@@ -47,5 +48,12 @@ public class CustomerMapper {
         customerDetailsDto.setEmail(customer.getEmail());
         customerDetailsDto.setMobileNumber(customer.getMobileNumber());
         return customerDetailsDto;
+    }
+
+    public static CustomerDtoForSpringSecurity mapToCustomerDtoForSpringSecurity(Customer customer, CustomerDtoForSpringSecurity customerDtoForSpringSecurity) {
+        customerDtoForSpringSecurity.setName(customer.getName());
+        customerDtoForSpringSecurity.setEmail(customer.getEmail());
+        customerDtoForSpringSecurity.setMobileNumber(customer.getMobileNumber());
+        return customerDtoForSpringSecurity;
     }
 }

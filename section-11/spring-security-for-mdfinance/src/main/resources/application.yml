@@ -1,0 +1,32 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: "spring-security-for-mdfinance"
+  datasource:
+    url: jdbc:mysql://localhost:3309/springsecuritydb
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      mode: always
+eureka:
+  instance:
+    preferIpAddress: true # This is to get the IP address of the service registered with Eureka
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

@@ -2,6 +2,7 @@ package com.md.accounts.controller;
 
 import com.md.accounts.dto.CustomerDetailsDto;
 import com.md.accounts.dto.CustomerDto;
+import com.md.accounts.dto.CustomerDtoForSpringSecurity;
 import com.md.accounts.dto.ErrorResponseDto;
 import com.md.accounts.service.ICustomersService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -75,5 +76,13 @@ public class CustomerController {
         CustomerDetailsDto customerDetailsDto = customersService.fetchCustomerDetails(mobileNumber, correlationId);
         logger.debug("fetchCustomerDetails method end");
         return ResponseEntity.status(HttpStatus.OK).body(customerDetailsDto);
+    }
+
+    @GetMapping("/fetchCustomer")
+    public ResponseEntity<CustomerDtoForSpringSecurity> fetchCustomer(@RequestParam String username) {
+        CustomerDtoForSpringSecurity customerDto = customersService.fetchCustomer(username);
+//        System.out.println("Customer fetched successfully");
+//        System.out.println("Customer Name: " + customerDto.toString());
+        return ResponseEntity.status(HttpStatus.OK).body(customerDto);
     }
 }
