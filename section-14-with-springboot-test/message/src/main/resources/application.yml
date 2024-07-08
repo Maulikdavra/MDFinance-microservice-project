@@ -1,0 +1,25 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: "message"
+  cloud:
+    function:
+      definition: email|sms
+    stream:
+      bindings:
+        emailsms-in-0: # This is the name of input binding
+          destination: send-communication # This is the name of the exchange,
+          # where the message will be sent later it will be passed to a queue named send-communication.message
+          # (because the group property is set to ${spring.application.name}, which resolves to message).
+          # It will then bind the queue to the exchange, account-ms should have the same exchange name.
+          group: ${spring.application.name}
+        emailsms-out-0:
+          destination: communication-sent
+          # Since we are using Spring Cloud Function, the message that will be sent to the exchange will return account number
+          # as the second function (sms) returns account number.
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092

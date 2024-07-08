@@ -4,83 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5278026-7d70-446e-bc97-772cb98a9ce0" name="Changes" comment="adding some remaining changes to the OpenTelemetry issue">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/dto/CustomerDtoForSpringSecurity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/md/gatewayserver/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/md/gatewayserver/filters/AuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/md/gatewayserver/filters/RouteValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/md/gatewayserver/util/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/SpringSecurityForMdfinanceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/config/AuthConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/config/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/dto/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/dto/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/mapper/CustomerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/respository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/impl/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/java/com/md/spring_security_for_mdfinance/service/impl/JwtServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-for-mdfinance/src/test/java/com/md/spring_security_for_mdfinance/SpringSecurityForMdfinanceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/02fdf8e8-5e75-40f1-9444-c0cd41516a6b/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/040aea92-58bb-40c6-bd8b-a95c584cf6ac/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/11bd9e96-e708-4642-ba4a-5d649f08f327/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/266c980e-aa88-4d28-be24-190b25f0b9d0/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/26aa1f15-1d07-423f-8a20-e56a691f8a86/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/3091272c-4c6d-4973-a556-78421f63a095/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/58e74088-ff43-4800-a0f0-4857e85873f9/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/596da8c1-14c2-4396-a9c1-23e9da91901b/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/5ee4ee5f-3246-4d5d-982c-88ff8b1b683a/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/722fa45b-cfef-481d-9cb3-5badb0bd6350/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/7314d564-5df3-4e17-89c2-72f43734ab8f/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/8154ea54-745d-4470-82ae-d76b59d75468/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/869019bd-0463-4827-8595-14540b621fef/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/8d73f33e-e8a1-4fa1-b692-62e4cdd425a6/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/8f707e6f-0316-4f71-bf95-d2449249b2b0/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/95f090cb-9fb6-461d-bb55-6fa540241c71/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/9dd4e6d5-41cf-4a6c-a8ee-3fa7912d75fd/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/a300a254-9351-4883-84e2-470e7e49f1be/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/ae08cba2-fd41-4b19-85f8-341ddb2b5432/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/b2156f33-17b8-4f5a-856f-4d0ea9ce23b7/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/be1f08e5-3a6a-446f-aab6-635452f59658/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/c54dd1d9-ddbf-4060-b5ce-562349a4f787/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/f066b31d-8aa8-4c7a-9136-e795e84798d1/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/.trash/f7de7263-3bac-4b3b-b727-e89846ec72aa/xl.meta.bkp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section-14/docker-compose/prod/.data/minio/.minio.sys/tmp/f0fb6ca6-f1ce-4b6a-b982-93fdf1fa821a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/dto/CustomerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/mapper/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/mapper/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/repository/CustomerRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/repository/CustomerRespository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/service/ICustomersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/service/ICustomersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/service/impl/CustomersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/service/impl/CustomersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/java/com/md/gatewayserver/GatewayserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/md/gatewayserver/GatewayserverApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="f5278026-7d70-446e-bc97-772cb98a9ce0" name="Changes" comment="Finished implementing Spring security authentication. please look at the new spring-security application including GatewayserverApplication and accounts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,12 +211,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717347313827</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished implementing Spring security authentication. please look at the new spring-security application including GatewayserverApplication and accounts">
+      <option name="closed" value="true" />
+      <created>1720217982891</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720217982891</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adding some remaining changes to the OpenTelemetry issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding some remaining changes to the OpenTelemetry issue" />
+    <MESSAGE value="Finished implementing Spring security authentication. please look at the new spring-security application including GatewayserverApplication and accounts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished implementing Spring security authentication. please look at the new spring-security application including GatewayserverApplication and accounts" />
   </component>
 </project>

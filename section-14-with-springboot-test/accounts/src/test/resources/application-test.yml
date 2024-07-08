@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "accounts-test"
+#  profiles:
+#    active: "test"
+  datasource:
+    url: jdbc:mysql://localhost:3360/testdb
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      mode: always
+  test:
+    database:
+      replace: none
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: false
+
+eureka:
+  client:
+    enabled: false

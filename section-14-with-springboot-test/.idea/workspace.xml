@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e34e85d6-bc68-4d63-b21e-5107d1b7594b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/integrationtest/accounts/service/AccountServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/controller/AccountsControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/exception/CustomerAlreadyExistExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/exception/GlobalExceptionHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/exception/ResourceNotFoundExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/functions/AccountFunctionsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/mapper/AccountsMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/mapper/CustomerMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/repository/AccountsRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/repository/CustomerRespositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/service/client/CardsFallbackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/service/client/CardsFeignClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/service/impl/AccountServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/service/impl/CustomersServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/setting-up-integration-test/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/setting-up-integration-test/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/setting-up-integration-test/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/setting-up-integration-test/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section-11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section-11/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Maulikdavra&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Maulikdavra/MDFinance-microservice-project.git&quot;,
+    &quot;accountId&quot;: &quot;5a8630bf-bba8-442f-930c-bcb82b1afdae&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/controller/AccountsController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/controller/CustomerController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/dto/CardsDto.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/dto/CustomerDetailsDto.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/dto/CustomerDto.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/functions/AccountFunctions.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/mapper/AccountsMapper.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/mapper/CustomerMapper.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/service/client/CardsFeignClient.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/service/client/LoansFeignClient.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/md/accounts/service/impl/CustomersServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/exception/CustomerAlreadyExistExceptionTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/exception/GlobalExceptionHandlerTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/exception/ResourceNotFoundExceptionTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/mapper/AccountsMapperTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/mapper/CustomerMapperTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/repository/AccountsRepositoryTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/repository/CustomerRespositoryTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/service/client/CardsFallbackTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/service/client/CardsFeignClientTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/test/java/unittest/accounts/service/impl/AccountServiceImplTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/message/src/main/java/com/md/message/dto/AccountsMsgDto.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ikkk2BLHDdqZLX7SRrmciGESER" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.AccountsApplication.executor": "Run",
+    "Application.ConfigserverApplication.executor": "Run",
+    "Application.EurekaserverApplication.executor": "Run",
+    "Application.GatewayserverApplication.executor": "Run",
+    "Application.MessageApplication.executor": "Run",
+    "Docker.resources.db: Compose Deployment.executor": "Run",
+    "Docker.resources: Compose Deployment.executor": "Run",
+    "JUnit.AccountFunctionsTest.executor": "Run",
+    "JUnit.AccountServiceImplTest.createAccount_ExistingCustomer_ThrowsException.executor": "Run",
+    "JUnit.AccountServiceImplTest.createAccount_NewCustomer_AccountCreated.executor": "Debug",
+    "JUnit.AccountServiceImplTest.deleteAccount_CustomerExists_AccountDeleted.executor": "Run",
+    "JUnit.AccountServiceImplTest.deleteAccount_CustomerNotFound_ThrowsException.executor": "Run",
+    "JUnit.AccountServiceImplTest.executor": "Run",
+    "JUnit.AccountServiceImplTest.fetchAccountDetails_CustomerExists_ReturnCustomerDto.executor": "Run",
+    "JUnit.AccountServiceImplTest.fetchAccountDetails_CustomerNotFound_ThrowsException.executor": "Run",
+    "JUnit.AccountServiceImplTest.updateAccount_AccountAndCustomerExist_AccountUpdated.executor": "Run",
+    "JUnit.AccountServiceImplTest.updateAccount_AccountNotFound_ThrowsException.executor": "Run",
+    "JUnit.AccountServiceImplTest.updateAccount_CustomerNotFound_ThrowsException.executor": "Run",
+    "JUnit.AccountServiceImplTest.updateCommunicationStatus_AccountExists_CommunicationStatusUpdated.executor": "Run",
+    "JUnit.AccountServiceImplTest.updateCommunicationStatus_AccountNotFound_ThrowsException.executor": "Run",
+    "JUnit.AccountServiceIntegrationTest.executor": "Run",
+    "JUnit.AccountServiceIntegrationTest.testFindByCustomerId.executor": "Run",
+    "JUnit.AccountsControllerTest.testCreateAccount.executor": "Run",
+    "JUnit.AccountsMapperTest.executor": "Run",
+    "JUnit.AccountsMapperTest.testMapToAccountsDto.executor": "Run",
+    "JUnit.AccountsRepositoryTest.executor": "Run",
+    "JUnit.AccountsRepositoryTest.testFindByCustomerId.executor": "Run",
+    "JUnit.CardsFallbackTest.executor": "Run",
+    "JUnit.CardsFallbackTest.fetchCardDetails_ReturnsDefaultCardsDto.executor": "Run",
+    "JUnit.CardsFallbackTest.testFetchCardDetailsReturnsNull.executor": "Run",
+    "JUnit.CardsFeignClientTest.executor": "Run",
+    "JUnit.CardsFeignClientTest.fetchCardDetailsTest.executor": "Run",
+    "JUnit.CardsFeignClientTest.fetchCardDetails_ReturnsDetails.executor": "Run",
+    "JUnit.CardsFeignClientTest.fetchCardDetails_ReturnsNull.executor": "Run",
+    "JUnit.CustomerMapperTest.executor": "Run",
+    "JUnit.CustomerMapperTest.testMapToCustomer.executor": "Run",
+    "JUnit.CustomerMapperTest.testMapToCustomerDetailsDtoNull.executor": "Run",
+    "JUnit.CustomerMapperTest.testMapToCustomerDto.executor": "Run",
+    "JUnit.CustomerMapperTest.testMapToCustomerDtoNull.executor": "Run",
+    "JUnit.CustomerMapperTest.testMapToCustomerNull.executor": "Run",
+    "JUnit.CustomerRespositoryTest.testFindByMobileNumber.executor": "Run",
+    "JUnit.CustomerServiceImplTest.fetchCustomerDetails_ReturnsDetails.executor": "Run",
+    "JUnit.CustomerServiceImplTest.fetchCustomerDetails_ThrowsResourceNotFoundException.executor": "Run",
+    "JUnit.CustomerServiceTest.registerCustomer_ThrowsCustomerAlreadyExistException.executor": "Run",
+    "JUnit.GlobalExceptionHandlerTest.handleCustomerAlreadyExistException.executor": "Run",
+    "JUnit.GlobalExceptionHandlerTest.handleGlobalException.executor": "Run",
+    "JUnit.GlobalExceptionHandlerTest.handleMethodArgumentNotValid.executor": "Run",
+    "JUnit.ResourceNotFoundExceptionTest.registerCustomer_ThrowsResourceNotFoundException.executor": "Run",
+    "JUnit.accounts in accounts.executor": "Coverage",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/MD/Documents/spring-boot-microservice-eazybytes/section-14-with-springboot-test",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference/setting-up-integration-test" />
+      <recent name="$PROJECT_DIR$/accounts/src/test/resources/unit-and-integration-test/difference" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.md.accounts.service.impl" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.md.accounts.controller" />
+      <recent name="com.md.accounts.repository" />
+      <recent name="com.md.accounts.service" />
+      <recent name="com.md.accounts.functions" />
+      <recent name="com.md.accounts.exception" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AccountServiceIntegrationTest.testFindByCustomerId">
+    <configuration name="AccountServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accounts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integrationtest.accounts.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integrationtest.accounts.service" />
+      <option name="MAIN_CLASS_NAME" value="integrationtest.accounts.service.AccountServiceIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountServiceIntegrationTest.testFindByCustomerId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accounts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integrationtest.accounts.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integrationtest.accounts.service" />
+      <option name="MAIN_CLASS_NAME" value="integrationtest.accounts.service.AccountServiceIntegrationTest" />
+      <option name="METHOD_NAME" value="testFindByCustomerId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountsControllerTest.testCreateAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accounts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.md.accounts.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.md.accounts.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.md.accounts.controller.AccountsControllerTest" />
+      <option name="METHOD_NAME" value="testCreateAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="resources: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="accounts/src/test/resources/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="resources.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="accounts/src/test/resources/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AccountServiceIntegrationTest.testFindByCustomerId" />
+        <item itemvalue="JUnit.AccountServiceIntegrationTest" />
+        <item itemvalue="Docker.resources: Compose Deployment" />
+        <item itemvalue="Docker.resources.db: Compose Deployment" />
+        <item itemvalue="JUnit.AccountsControllerTest.testCreateAccount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e34e85d6-bc68-4d63-b21e-5107d1b7594b" name="Changes" comment="" />
+      <created>1720042103656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720042103656</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/section_14_with_springboot_test$accounts_in_accounts.ic" NAME="accounts in accounts Coverage Results" MODIFIED="1720417143876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
